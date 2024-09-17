@@ -1,0 +1,38 @@
+<% layout('./layout/boilerplate.ejs') -%>
+<head>
+    <link rel="stylesheet" href="/css/list.css">
+</head>
+<body>
+    <%- include('../includes/filter')  %>
+    <div class="cards row-col-lg-3">
+        <% for(list of lists){%>
+            <a href="/listings/<%=list.id%>" class="view">
+                <div class="card" style="width: 23rem;">
+                    <img src="<%=list.image.url%>" class="card-img-top">
+                    <div class="card-body">
+                        <p class="card-text">
+                            <%=list.title%>
+                        </p>
+                        <p class="card-text">Price: &#8377;<%=list.price.toLocaleString('en-IN')%>/night  <i class="tax-detail">+18% GST</i></p>
+
+                    </div>
+                </div>
+            </a>
+            <%}%>
+    </div>
+    <br><br><br><br>
+    <!-- <script src="/js/filter.js"></script> -->
+    <script>
+        let taxBtn=document.querySelector('.tax');
+        taxBtn.addEventListener('click',()=>{
+            let taxes = document.querySelectorAll('.tax-detail');
+            for(detail of taxes){
+                if(detail.style.display=='inline'){
+                    detail.style.display='none';
+                }else{
+                    detail.style.display='inline'
+                }
+            }
+        })
+    </script>
+</body>

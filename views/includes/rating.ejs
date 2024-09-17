@@ -1,0 +1,67 @@
+<head>
+    <link rel="stylesheet" href="/css/rating.css">
+</head>
+
+<body>
+    <div class="reviewtemp">
+        <form action="/listings/<%= list._id %>/review" method="post" class="needs-validation" novalidate>
+            <% if(currUser){ %>
+            <h5>Rate property</h5>
+            <label for="rating" class="form-label mb-1 mt-2">Rating &nbsp; </label>
+            <fieldset class="starability-slot">
+                <input type="radio" id="no-rate" class="input-no-rate" name="data[rating]" value="1" checked
+                    aria-label="No rating." />
+                <input type="radio" id="first-rate1" name="data[rating]" value="1" />
+                <label for="first-rate1" title="Terrible">1 star</label>
+                <input type="radio" id="first-rate2" name="data[rating]" value="2" />
+                <label for="first-rate2" title="Not good">2 stars</label>
+                <input type="radio" id="first-rate3" name="data[rating]" value="3" />
+                <label for="first-rate3" title="Average">3 stars</label>
+                <input type="radio" id="first-rate4" name="data[rating]" value="4" />
+                <label for="first-rate4" title="Very good">4 stars</label>
+                <input type="radio" id="first-rate5" name="data[rating]" value="5" />
+                <label for="first-rate5" title="Amazing">5 stars</label>
+            </fieldset>
+            <textarea name="data[feedback]" id="comment" rows="3" cols="40" class="form-control"
+                placeholder="Leave a feedback" style="width: 80%;" required></textarea>
+            <div class="invalid-feedback ">
+                You can't add an empty review.
+            </div>
+            <button class="btn btn-success mt-1">Add</button>
+            <% } %>
+            <% if(!currUser){ %>
+                <div class="div" style="text-align: center; width: 80%;">
+                    <button class="btn btn-success mb-3 mt-3">New Review</button>
+                </div>
+            <% } %>
+        </form>
+        <hr style="width: 80%;">
+
+                        <% if(list.reviews.length){ %>
+                            <div class="all-review">
+                                <h5 class="sticky-top">All Reviews</h5>
+                                <% for(review of list.reviews) { %>
+                                    <div class="card mb-2">
+                                        <div class="card-body">
+                                            <p class="card-title"><strong>@<%= review.owner.username %></strong></p>
+                                            <p class="starability-result card-title" data-rating="<%= review.rating%>">
+                                            </p>
+                <p class="card-text">
+                    <%=review.feedback%>.
+                </p>
+                <% if(currUser && review.owner._id.equals(currUser._id)) {%>
+                        <form method="post"
+                        action="/listings/<%= list._id %>/review/<%= review._id %>?_method=DELETE"
+                        class="del">
+                        <button style="border: none;"><i
+                        class="fa-solid fa-trash"></i></button>
+                    </form>
+                <% } %>
+                </div>
+            </div>
+            <%}%>
+            </div>
+        <% } %>
+    </div>
+    <script src="/js/validate.js"></script>
+</body>

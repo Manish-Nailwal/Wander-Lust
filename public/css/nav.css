@@ -1,0 +1,39 @@
+
+.navbar{
+    background-color: white;
+    height: 5rem;
+}
+.navbar-brand{
+    font-size: 30px !important;
+}
+.navbar-brand i{
+    color: #FF5A5F;
+}
+.navbar-nav{
+    background-color: #fff;
+}
+.nav-link{
+    color: #222222;
+    background-color: #fff;
+}
+.nav-link:hover{
+    text-decoration: underline;
+}
+.search-btn{
+    background-color: #FF5A5F;
+    color: #fff;
+    border-radius: 1rem;
+    margin: 0;
+    padding: 2;
+}
+.search-btn:hover{
+    background-color: #FF5A5F;
+    color: #fff;
+}
+.search-btn i{
+    margin: 0;
+}
+.search-bar{
+    border-radius: 25px;
+    border: #22222291 solid 0.5px;
+}

@@ -1,0 +1,93 @@
+<% layout('./layout/boilerplate.ejs') -%>
+
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/add.css">
+    </head>
+
+    <body>
+        <h3 style="text-align: center;">Create</h3>
+        <form method="POST" action="/listings/" class="row needs-validation create" enctype="multipart/form-data" novalidate>
+            <div class="mb-3 offset-3 col-6">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" name="data[title]" id="title" class="form-control" placeholder="property name"
+                    required>
+                <div class="invalid-feedback">
+                    Need title!
+                </div>
+            </div>
+            <div class="mb-3 offset-3 col-6">
+                <label for="description" class="form-label">Description</label>
+                <input type="text" name="data[description]" id="description" class="form-control"
+                    placeholder="description" required>
+                <div class="invalid-feedback">
+                    Need description!
+                </div>
+            </div>
+            <div class="mb-3 offset-3 col-3">
+                <label for="image" class="form-label">Upload Image</label>
+                <input type="file" name="data[image]" id="image" class="form-control">
+            </div>
+            <div class="mb-3 col-3">
+                <label for="price" class="form-label">Price</label>
+                <input type="number" placeholder="Price" name="data[price]" id="price" class="form-control" required>
+                <div class="invalid-feedback">
+                    Need Price!
+                </div>
+            </div>
+            <div class="mb-3 offset-3 col-4">
+                <label for="location" class="form-label">Location</label>
+                <input type="text" placeholder="Location" name="data[location]" id="location" class="form-control"
+                    required>
+                <div class="invalid-feedback">
+                    Need location!
+                </div>
+            </div>
+            <div class="mb-3 col-2">
+                <label for="country" class="form-label">Country</label>
+                <input type="text" placeholder="Country" name="data[country]" id="country" class="form-control"
+                    required>
+                <div class="invalid-feedback">
+                    Need country!
+                </div>
+            </div>
+            
+            <div class="checkbox offset-3 col-6 ">
+                <label for="country" class="form-label">Add Category</label>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="room" name="data[category]">
+                    <label class="form-check-label" for="inlineCheckbox1">Room</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="hotel" name="data[category]">
+                    <label class="form-check-label" for="inlineCheckbox2">Hotel</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="outing" name="data[category]">
+                    <label class="form-check-label" for="inlineCheckbox3">Outing </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="beach" name="data[category]">
+                    <label class="form-check-label" for="inlineCheckbox4">Beach</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="pool" name="data[category]">
+                    <label class="form-check-label" for="inlineCheckbox5">Pool</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="nature" name="data[category]">
+                    <label class="form-check-label" for="inlineCheckbox6">Nature </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="mountain" name="data[category]">
+                    <label class="form-check-label" for="inlineCheckbox7">Mountain </label>
+                  </div>
+            </div>
+            <div class="offset-3">
+                <button class="btn btn-success ">Create</button>
+            </div>
+        </form>
+
+        <script src="/js/validate.js"></script>
+    </body>

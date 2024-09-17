@@ -1,0 +1,43 @@
+body::-webkit-scrollbar{
+    width: 0;
+}
+body,.reviewtemp{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.view , .content , .reviews ,.reviewtemp{
+    height: 85vh !important;
+
+}
+
+.content{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.content::-webkit-scrollbar , .all-review::-webkit-scrollbar ,.reviewtemp::-webkit-scrollbar{
+    width: 0;
+}
+img{
+    height: 18rem;
+}
+
+.all-review{
+    height: 80% !important;
+    width: 80%;
+    overflow-y: auto;
+}
+.all-review h5{
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+}
+hr{
+    margin: 0;
+    margin-top: 4px;
+}
+.del{
+    position: absolute;
+    top: 1.2rem;
+    right: 0.8rem;
+}

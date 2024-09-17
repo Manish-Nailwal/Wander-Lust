@@ -1,0 +1,61 @@
+<% layout('./layout/boilerplate.ejs') -%>
+
+    <head>
+        <link rel="stylesheet" href="/css/show.css">
+        <style>
+            .btn{
+                display: inline-flex;
+                align-items: center;
+            }
+        </style>
+       
+    </head>
+
+    <body>
+        <div class="row view">
+            <!-- Main content -->
+            <div class="offset-1 col-4 content mt-3">
+                <h3 class="mb-3 card-text">
+                    <%=list.title%>
+                </h3>
+                <div class="card"  style="border: none;">
+                    <a href="/zoom/<%=list._id%>" class="rounded-4 card-img-top"><img src="<%=list.image.url%>" alt=""
+                            class="rounded-4 card-img-top"></a>
+                </div>
+                <hr>
+                <div class="card-text">
+                    <strong>
+                        <p class="card-text">Owned by: <%= list.owner.username%>
+                        </p>
+                    </strong>
+                    <div class="description mt-2 card-text">
+                        <p class="mb-3">
+                            <%=list.description%>
+                        </p>
+                    </div>
+                    <hr>
+                    <p class="mb-3 card-text">Price: &#8377;<%=list.price.toLocaleString('en-IN')%> /night</p>
+                    <p class="mb-3 card-text">
+                        <%=list.location%>, <%=list.country%>
+                    </p>
+                </div>
+                
+                <form method="POST" action="/listings/<%=list._id%>?_method=DELETE">
+                    <% if(currUser && currUser._id.equals(list.owner._id)) { %>
+                    <a href="/listings/edit/<%=list._id%>" class="btn btn-secondary mb-3">Edit</a>
+                    <button class="btn btn-danger mb-3">Delete</button>
+                    <% } %>
+                    <a href="https://www.google.co.in/maps/dir//<%=list.location%>" class="btn btn-secondary mb-3" >Get Direction &nbsp;<i class="fa-solid fa-location-arrow"></i></a>
+                </form>
+                
+            </div>
+            <div class="offset-2 col-4 mt-3">
+                <!-- reviews -->
+                
+                <%- include('../includes/rating.ejs') %>
+            </div>
+        </div>
+        <br><br><br>
+        <script src="/js/validate.js"></script>
+        
+    </body>

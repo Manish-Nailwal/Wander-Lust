@@ -1,0 +1,44 @@
+
+.cards {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-align: center;
+    margin: 0;
+    padding: auto;
+}
+
+img {
+    height: 18rem;
+}
+
+.view {
+    text-decoration: none;
+}
+
+.card {
+    border: none;
+    display: inline-flex;
+    margin: 0 1rem 2rem 1rem;
+}
+
+.card-img-top {
+    border-radius: 1rem;
+    object-fit: cover !important;
+    width: 100%;
+}
+
+.card-body {
+    padding: 0.5rem 0 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.card-text {
+    margin: 0%;
+}
+
+i{
+    display: none;
+}

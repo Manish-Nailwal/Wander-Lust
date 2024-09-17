@@ -1,0 +1,21 @@
+::-webkit-scrollbar{
+    width: 0;
+}
+.form-control{
+    /* border: solid black 1px; */
+    width: 100%;
+}
+.form-label{
+    width: 100%;
+}
+
+.img{
+    max-width: 40rem;
+    border: 0;
+}
+.img a,.img a image{
+    margin: 0;
+}
+.form-check-input , .create .form-control{
+    border: solid black 0.5px;
+}

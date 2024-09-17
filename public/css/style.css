@@ -1,0 +1,44 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar{
+    width: 0;
+}
+
+.container{
+    flex: 1;
+}
+
+
+
+/* footer */
+.f-info-links a ,.f-info-social a{
+    text-decoration: none;
+    color: #222222;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+.f-info-links , .f-info-social , .f-info-brand{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.f-info-social i{
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.f-info{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ebebeb;
+    height: 8rem;
+    justify-content: center;
+    align-items: space-evenly;
+}
