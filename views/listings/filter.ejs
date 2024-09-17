@@ -15,7 +15,7 @@
                             <p class="card-text">
                                 <%=list.title%>
                             </p>
-                            <p class="card-text">Price: &#8377;<%=list.price.toLocaleString('en-IN')%>/night</p>
+                            <p class="card-text">Price: &#8377;<%=list.price.toLocaleString('en-IN')%>/night</p> <i class="tax-detail">+18% GST</i></p>
     
                         </div>
                     </div>
@@ -23,4 +23,17 @@
                 <%}%>
         </div>
         <br><br><br><br>
+        <script>
+            let taxBtn=document.querySelector('.tax');
+            taxBtn.addEventListener('click',()=>{
+                let taxes = document.querySelectorAll('.tax-detail');
+                for(detail of taxes){
+                    if(detail.style.display=='inline'){
+                        detail.style.display='none';
+                    }else{
+                        detail.style.display='inline'
+                    }
+                }
+            })
+        </script>
     </body>
