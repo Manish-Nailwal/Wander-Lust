@@ -9,15 +9,15 @@
     <body>
         <br><br>
         <div class="row view">
-            <div class="offset-2 col-4 content mt-3 img card">
+            <div class="offset-1 offset-md-1 col-10 col-md-4 content mt-3 img card">
                 <a href="/zoom/<%=list._id%>"><img src="<%=list.image.url%>" alt=""
-                        class="rounded-4 card-img-top object-fit-contain"></a>
+                        class="rounded-4 card-img-top " style="max-height: 21rem;"></a>
             </div>
 
-            <div class="col-5 mt-3">
+            <div class="offset-1 col-10 col-md-6 mt-2">
 
                 <form method="POST" action="/listings/edit/<%=list._id%>?_method=PUT" class="row needs-validation" enctype="multipart/form-data" novalidate>
-                    <div class="mb-3 offset-2 col-md-8">
+                    <div class="mb-3 offset-md-1 col-md-9">
                         <label for="title" class="form-label">Title</label>
                         <input type="text" name="data[title]" id="title" class="form-control"
                             placeholder="property name" value='<%=list.title%>' required>
@@ -25,7 +25,7 @@
                             It can't be empty!
                         </div>
                     </div>
-                    <div class="mb-3 offset-2 col-8">
+                    <div class="mb-3 offset-md-1 col-md-9">
                         <label for="description" class="form-label">Description</label>
                         <textarea type="text" name="data[description]" id="description" class="form-control"
                             placeholder="description" required><%=list.description%></textarea>
@@ -33,18 +33,18 @@
                             It can't be empty!
                         </div>
                     </div>
-                    <div class="mb-3 offset-2 col-8">
+                    <div class="mb-3 offset-md-1 col-md-9">
                         <label for="image" class="form-label">Upload New Image</label>
                         <input type="file" name="data[image]" id="image" class="form-control" >
                     </div>
-                    <div class="mb-3 offset-2 col-2">
+                    <div class="mb-3 offset-md-1 col-md-3">
                         <label for="price" class="form-label">Price</label>
                         <input type="number" placeholder="Price" name="data[price]" id="price" class="form-control" required value='<%=list.price%>'>
                         <div class="invalid-feedback">
                             It can't be empty!
                         </div>
                     </div>
-                    <div class="mb-3 col-3">
+                    <div class="mb-3 col-6 col-md-3">
                         <label for="location" class="form-label">Location</label>
                         <input type="text" placeholder="Location" name="data[location]" id="location"
                             class="form-control" required value='<%=list.location%>'>
@@ -52,7 +52,7 @@
                                 It can't be empty!
                             </div>
                     </div>
-                    <div class="mb-3 col-3">
+                    <div class="mb-3 col-6 col-md-3">
                         <label for="country" class="form-label">Country</label>
                         <input type="text" placeholder="Country" name="data[country]" id="country" class="form-control"
                             required value='<%=list.country%>'>
@@ -60,7 +60,7 @@
                                 It can't be empty!
                             </div>
                     </div>
-                    <div class="offset-2">
+                    <div class="offset-md-1 mb-3">
                         <button class="btn btn-success ">Update</button>
                     </div>
                 </form>

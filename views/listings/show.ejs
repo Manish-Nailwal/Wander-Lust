@@ -14,26 +14,26 @@
     <body>
         <div class="row view">
             <!-- Main content -->
-            <div class="offset-1 col-4 content mt-3">
+            <div class="offset-1 col-10 col-lg-4 content mt-3">
                 <h3 class="mb-3 card-text">
                     <%=list.title%>
                 </h3>
                 <div class="card"  style="border: none;">
                     <a href="/zoom/<%=list._id%>" class="rounded-4 card-img-top"><img src="<%=list.image.url%>" alt=""
-                            class="rounded-4 card-img-top"></a>
+                            class="rounded-4 card-img-top" style="max-width: 35rem;"></a>
                 </div>
-                <hr>
+                <hr style="max-width: 40rem;">
                 <div class="card-text">
                     <strong>
                         <p class="card-text">Owned by: <%= list.owner.username%>
                         </p>
                     </strong>
-                    <div class="description mt-2 card-text">
+                    <div class="description mt-2 card-text" style="max-width: 39rem;">
                         <p class="mb-3">
                             <%=list.description%>
                         </p>
                     </div>
-                    <hr>
+                    <hr style="max-width: 40rem;">
                     <p class="mb-3 card-text">Price: &#8377;<%=list.price.toLocaleString('en-IN')%> /night</p>
                     <p class="mb-3 card-text">
                         <%=list.location%>, <%=list.country%>
@@ -49,7 +49,7 @@
                 </form>
                 
             </div>
-            <div class="offset-2 col-4 mt-3">
+            <div class="offset-1 offset-lg-2 col-10 col-lg-5 mt-lg-4">
                 <!-- reviews -->
                 
                 <%- include('../includes/rating.ejs') %>

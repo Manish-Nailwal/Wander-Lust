@@ -7,9 +7,9 @@
     </head>
 
     <body>
-        <h3 style="text-align: center;">Create</h3>
+        <h3 class="mt-3" style="text-align: center;">Create</h3>
         <form method="POST" action="/listings/" class="row needs-validation create" enctype="multipart/form-data" novalidate>
-            <div class="mb-3 offset-3 col-6">
+            <div class="mb-3 offset-1 col-10 offset-md-3 col-md-6">
                 <label for="title" class="form-label">Title</label>
                 <input type="text" name="data[title]" id="title" class="form-control" placeholder="property name"
                     required>
@@ -17,7 +17,7 @@
                     Need title!
                 </div>
             </div>
-            <div class="mb-3 offset-3 col-6">
+            <div class="mb-3 offset-1 col-10 offset-md-3 col-md-6">
                 <label for="description" class="form-label">Description</label>
                 <input type="text" name="data[description]" id="description" class="form-control"
                     placeholder="description" required>
@@ -25,18 +25,18 @@
                     Need description!
                 </div>
             </div>
-            <div class="mb-3 offset-3 col-3">
+            <div class="mb-3 offset-1 col-5 offset-md-3 col-md-3">
                 <label for="image" class="form-label">Upload Image</label>
                 <input type="file" name="data[image]" id="image" class="form-control" required>
             </div>
-            <div class="mb-3 col-3">
+            <div class="mb-3 col-5 col-md-3">
                 <label for="price" class="form-label">Price</label>
                 <input type="number" placeholder="Price" name="data[price]" id="price" class="form-control" required>
                 <div class="invalid-feedback">
                     Need Price!
                 </div>
             </div>
-            <div class="mb-3 offset-3 col-4">
+            <div class="mb-3 offset-1 col-6 offset-md-3 col-md-4">
                 <label for="location" class="form-label">Location</label>
                 <input type="text" placeholder="Location" name="data[location]" id="location" class="form-control"
                     required>
@@ -44,7 +44,7 @@
                     Need location!
                 </div>
             </div>
-            <div class="mb-3 col-2">
+            <div class="mb-3 col-4 col-md-2">
                 <label for="country" class="form-label">Country</label>
                 <input type="text" placeholder="Country" name="data[country]" id="country" class="form-control"
                     required>
@@ -53,7 +53,7 @@
                 </div>
             </div>
             
-            <div class="checkbox offset-3 col-6 ">
+            <div class="checkbox offset-1 col-10 offset-md-3 col-md-6 ">
                 <label for="country" class="form-label">Add Category</label>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="room" name="data[category]">
@@ -84,7 +84,7 @@
                     <label class="form-check-label" for="inlineCheckbox7">Mountain </label>
                   </div>
             </div>
-            <div class="offset-3">
+            <div class="offset-1 offset-md-3 my-2">
                 <button class="btn btn-success ">Create</button>
             </div>
         </form>

@@ -26,3 +26,6 @@
 .filter:hover{
     opacity: 1;
 }
+.label{
+    cursor: pointer;
+}

@@ -5,9 +5,10 @@ body,.reviewtemp{
     overflow-y: auto;
     overflow-x: hidden;
 }
-.view , .content , .reviews ,.reviewtemp{
-    height: 85vh !important;
-
+@media (min-width: 1200px) {
+    .view, .content, .reviews, .reviewtemp {
+        height: 85vh !important;
+    }
 }
 
 .content{

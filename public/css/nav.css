@@ -9,12 +9,9 @@
 .navbar-brand i{
     color: #FF5A5F;
 }
-.navbar-nav{
-    background-color: #fff;
-}
 .nav-link{
     color: #222222;
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 .nav-link:hover{
     text-decoration: underline;
@@ -37,3 +34,11 @@
     border-radius: 25px;
     border: #22222291 solid 0.5px;
 }
+@media (max-width: 991.50px) {
+    .navbar-nav{
+        background-color: #fff;
+    }
+    .nav-link{
+        background-color: #fff;
+    }
+  }
